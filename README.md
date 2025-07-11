@@ -1,9 +1,5 @@
-# Define repoistory name
-
-Define description.
-
-## Get started
-We are currently in the process of standing up [SwaggerHub](https://wwww.swaggerhub.com) to host OpenAPI definitions. More to come.
+# Ceding Carrier Data
+Auto populating ceding carrier data while completing a replacement during the order entry process. 
 
 Please refer to the [style guide](https://github.com/Insured-Retirement-Institute/Style-Guide) for technical governance of standards, data dictionary, and the code of conduct.
 
@@ -14,12 +10,11 @@ Define your business case for the specification.
 - Load your user stories, personna - supporting documents for the business case.
 
 ## Business Owners 
-- Carrier Business Owner: contact
-- Distributor Business Owner: contact
-- Solution Provider Business Owner: contact
+- Distributor Business Owner: JP Morgan Chase - Leland Snyder
+- Solution Provider Business Owner: DTCC - Jeanann Smith; Zinnia - Saul Herrera 
 
 ## How to engage, contribute, and give feedback
-- These working groups are occuring on ....
+- These working groups are occuring on Tuesdays at 10am Eastern Time
 - Please contact the business owners or IRI (hpikus@irionline.org) to get added to the working group discussions. 
 
 ## Change subsmissions and reporting issues and bugs
