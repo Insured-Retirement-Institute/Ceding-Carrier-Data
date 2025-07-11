@@ -24,18 +24,18 @@ When BD is NOT already broker of record on the contract. Understanding from the 
 
 Objectives and Key Results 
 
-Objective: Prepopulate the required data points the client/advisor need. 
+  Objective: Prepopulate the required data points the client/advisor need. 
 Key Result:  
 
-Time spent on OE platform – if we can drill down to that specific screen 
+ - Time spent on OE platform – if we can drill down to that specific screen 
 
-Carrier call centers taking calls on ceding carrier contracts 
+ - Carrier call centers taking calls on ceding carrier contracts 
 
-NIGO numbers that stem back to the OE platform page (Zinnia – Additional Payments Screen) 
+ - NIGO numbers that stem back to the OE platform page (Zinnia – Additional Payments Screen) 
 
-Supervision Inquires that stem from that page 
+ - Supervision Inquires that stem from that page 
 
-Right/Wrong selections of addresses on YellowPages 
+ - Right/Wrong selections of addresses on YellowPages 
 
 ## User Stories, personna - supporting documents for the business case
 Use Case 1: Remove the pain points for the user of the page for all the reasons stated above.  
