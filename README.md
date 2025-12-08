@@ -8,21 +8,12 @@ Executive Summary:
 
 Ceding Carrier Contract Information to populate in the Order Entry (OE) platforms when it is an Exchange/Transfer.  
 
-Problem: 
+#### Problem: 
 
 *Problem*. Causing multiple issues with advisors selecting the wrong location of ceding carrier in YellowPages, calling carrier and sitting on phone for 20-30 mins, putting in wrong info on the ceding contract, multiple NIGOs and Supervision Inquires tying back to this screen on OE platforms.  
 
- 
 
-2 Paths to Solve: 
-
- 
-
-When BD is already broker of record on the contract – should be less of an issue to get the data from DTCC (For JPMC in 2024 this was the case for 75% of our exchanges/transfers) DTCC plans to look for policy number and validates: requesting broker dealer (not the specific advisor) and carrier. Do we need to validate anything else? (Athene, Global, Nationwide and NYL – nothing else) 
-
-When BD is NOT already broker of record on the contract. Understanding from the client they are planning to surrender the contract and move to a new one. 
-
-Objectives and Key Results 
+#### Objectives and Key Results 
 
   Objective: Prepopulate the required data points the client/advisor need. 
 Key Result:  
@@ -31,7 +22,7 @@ Key Result:
 
  - Carrier call centers taking calls on ceding carrier contracts 
 
- - NIGO numbers that stem back to the OE platform page (Zinnia – Additional Payments Screen) 
+ - NIGO numbers that stem back to the OE platform page 
 
  - Supervision Inquires that stem from that page 
 
