@@ -1,7 +1,7 @@
 # Ceding Carrier Data
 Auto populating ceding carrier data while completing a replacement during the order entry process. 
 
-Please refer to the [style guide](https://github.com/Insured-Retirement-Institute/Style-Guide) for technical governance of standards, data dictionary, and the code of conduct.
+Please refer to the [Digital-First-Specifications](https://github.com/Insured-Retirement-Institute/Digital-First-Specifications) repository for technical governance of standards, data dictionary, and the code of conduct.
 
 ## Business Case
 Executive Summary: 
@@ -48,4 +48,4 @@ Security issues and bugs should be reported directly to Katherine Dease kdease@i
 
 ## Code of conduct
 
-See [style guide](https://github.com/Insured-Retirement-Institute/Style-Guide)
+See [Digital-First-Specifications](https://github.com/Insured-Retirement-Institute/Digital-First-Specifications) repository
