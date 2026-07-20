@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Ceding Carrier Data API
   description: APIs for retrieving comprehensive policy data from ceding carriers including policy details, parties, contract values, allocations, riders, and benefits.
-  version: 1.0.0
+  version: 0.1.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
@@ -36,7 +36,8 @@ paths:
         '429': { $ref: '#/components/responses/TooManyRequestsError' }
         '500': { $ref: '#/components/responses/InternalServerError' }
         '503': { $ref: '#/components/responses/ServiceUnavailableError' }
-
+security:
+  - oauth2: []
 components:
   parameters:
     policyNumber:
@@ -165,13 +166,9 @@ components:
       type: object
       description: Complete policy response from ceding carrier
       required:
-        - correlationId
         - policyNumber
         - parties
       properties:
-        correlationId:
-          type: string
-          description: Correlation ID for request tracing
         policyNumber:
           type: string
           minLength: 1
@@ -275,9 +272,9 @@ components:
     Party:
       type: object
       description: Individual or entity party to the policy
-      required:
-        - type
-        - role
+      anyOf: 
+        - required: [type,role,firstName,lastName]
+        - required: [type,role,name]        
       properties:
         type:
           type: string
@@ -368,6 +365,10 @@ components:
           type: number
           format: float
           description: The dollar amount or percentage reduction applied upon surrender
+        surrenderChargeType:
+          type: string          
+          enum: [currency,percentage]
+          description: Indicates the unit of the surrenderCharge field
         surrenderChargeExpirationDate:
           type: string
           format: date
@@ -457,6 +458,26 @@ components:
       type: object
       description: Rider fee information
       properties:
+        riderType:
+          type: string
+          enum: 
+            - BASE
+            - RIDER
+            - INTEGRATED_RIDER
+            - BENEFIT_RIDER
+            - INCOME_RIDER
+            - DEATH_BENEFIT_RIDER
+            - LTC_RIDER
+            - GMWB_RIDER
+            - GMDB_RIDER
+            - GMAB_RIDER
+            - CHARGE_RIDER
+            - DISCOUNT
+            - BASE_INCREASE
+            - RIDER_INCREASE
+            - OTHER
+            - UNKNOWN
+          description: Type of rider
         totalRiderFee:
           type: number
           format: float
@@ -469,6 +490,8 @@ components:
       description: Living benefit rider details
       required:
         - isActivated
+        - hasLivingBenefit
+        - type
       properties:
         hasLivingBenefit:
           type: boolean
@@ -582,8 +605,21 @@ components:
       description: LTC Rider or HLTC-LTC details
       properties:
         specifiedAmount:
-          type: string
+          type: number
+          format: float
           description: The specific LTC benefit amount selected (Total Benefit Value - code TBV)
         maxMonthlyBenefit:
-          type: string
+          type: number
+          format: float
           description: The maximum LTC benefit payable per month (Maximum Monthly Benefit Value - code MMB)
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: OAuth2 flows supported by this endpoint.
+      flows:
+        clientCredentials:
+          tokenUrl: https://TOKEN_URL
+          scopes:
+            ioe.ceding-carrier.read: read access to protected resources            
+            ioe.ceding-carrier.all: all access to protected resources
+
