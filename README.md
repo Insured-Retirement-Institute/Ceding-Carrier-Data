@@ -14,7 +14,7 @@ code of conduct.
 
 ## Business Case
 
-The working group's draft business case documentation is available in this repository. Once the documentation is finalized, it will be formally published on the [IRI DFA Library of Standards](https://www.irionline.org/member-programs/operations-technology/digital-first-library-standards/).
+The working group's draft business case documentation is available in this repository. Once the documentation is finalized, it will be formally published on the [IRI DFA Library of Standards](https://www.irionline.org/operations-technology/digital-first-library-standards/).
 
 Executive Summary: 
 
